@@ -47,6 +47,7 @@ cd experiments
 ```shell
 conda env create -f environment.yaml -n semantic_uncertainty 
 conda activate semantic_uncertainty
+pip install huggingface --upgrade
 ```
 2) Run scripts
 ```shell
@@ -56,7 +57,7 @@ python semantic_uncertainty/generate_answers.py --model_name=Llama-3.2-1B --data
 python semantic_uncertainty/generate_answers.py --model_name=phi-2 --dataset=pubmedqa
 python semantic_uncertainty/generate_answers.py --model_name=gemma-2b --dataset=pubmedqa
 ```
-When script is running, it will prompt for a wandb api key. Choose option 2 and enter in the api key, and it will run.
+When script is running, it will prompt for a wandb api key. Choose option 2 and enter in your api key, and the script will continue to run.
 
 3) Results will be tracked in wandb
 

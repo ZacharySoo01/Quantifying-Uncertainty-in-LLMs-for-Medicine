@@ -1,0 +1,14 @@
+accuracy: 0.68 	 method: sar 	 type: rougeL_to_target 	 threshold: 0.5000 	 AUC: 0.4559
+accuracy: 0.7 	 method: sar 	 type: sentsim 	 threshold: 0.5000 	 AUC: 0.4229
+accuracy: 0.68 	 method: sentence-sar 	 type: rougeL_to_target 	 threshold: 0.5000 	 AUC: 0.5570
+accuracy: 0.7 	 method: sentence-sar 	 type: sentsim 	 threshold: 0.5000 	 AUC: 0.5943
+accuracy: 0.68 	 method: token-sar 	 type: rougeL_to_target 	 threshold: 0.5000 	 AUC: 0.4191
+accuracy: 0.7 	 method: token-sar 	 type: sentsim 	 threshold: 0.5000 	 AUC: 0.3886
+accuracy: 0.68 	 method: semantic-entropy 	 type: rougeL_to_target 	 threshold: 0.5000 	 AUC: 0.5147
+accuracy: 0.7 	 method: semantic-entropy 	 type: sentsim 	 threshold: 0.5000 	 AUC: 0.5010
+accuracy: 0.68 	 method: len-normed-predictive-entropy 	 type: rougeL_to_target 	 threshold: 0.5000 	 AUC: 0.4540
+accuracy: 0.7 	 method: len-normed-predictive-entropy 	 type: sentsim 	 threshold: 0.5000 	 AUC: 0.4305
+accuracy: 0.68 	 method: predictive-entropy 	 type: rougeL_to_target 	 threshold: 0.5000 	 AUC: 0.5000
+accuracy: 0.7 	 method: predictive-entropy 	 type: sentsim 	 threshold: 0.5000 	 AUC: 0.5448
+accuracy: 0.68 	 method: lexical-similarity 	 type: rougeL_to_target 	 threshold: 0.5000 	 AUC: 0.5460
+accuracy: 0.7 	 method: lexical-similarity 	 type: sentsim 	 threshold: 0.5000 	 AUC: 0.5295

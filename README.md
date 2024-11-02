@@ -13,7 +13,11 @@ The dataset that was used was the PubMedQA dataset.
 ## Prerequisites 
 1) Install miniconda at https://docs.anaconda.com/miniconda/
 2) Create a HuggingFace account and obtain access to Phi-2, Llama-3.2, and Gemma
-3) Create a wandb account
+3) Login to the HuggingFace account via huggingface-cli
+```shell
+huggingface-cli login
+```
+4) Create a wandb account
 
 ## Running SAR experiments
 1) Create and activate the SAR environment

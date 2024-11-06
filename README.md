@@ -1,4 +1,4 @@
-# Uncertainty-Quantification-in-LLMs-for-Medical-Domain
+# Quantifying Uncertainty in LLMs for Medicine
 Capstone Project by Zachary Soo
 ## Overview
 In the medical domain, an important topic in the application of Large Language Models (LLMs) is **uncertainty**, as the issue of hallucination influences LLM certainty in its produced responses to a prompt.
@@ -7,7 +7,7 @@ This project explores two uncertainty quantification methods, Shifting Attention
 ## Goal
 How do different methods compare in quantifying how certain an LLM is in providing answers to medical questions (PubMedQA)?
 
-* In answering this question, the LLMs that were used were OPT-2.7b, GPT-NEO-2.7b, Llama-3.2-1b, Phi-2-2.7b, and gemma-2b
+* In answering this question, the LLMs that were used were OPT-2.7b, GPT-NEO-2.7b, Llama-3.2-1b, Phi-2-2.7b, and Gemma-2b
 * The dataset that was used was the PubMedQA dataset
 * Experiments were run on a machine with 4 NVIDIA RTX 5000's and an Intel(R) Core(TM) i9-9960X CPU @ 3.10GHz
 
@@ -21,7 +21,7 @@ huggingface-cli login
 4) Create a wandb account
 
 ## Running SAR experiments
-1) In the SAR directory, Create and activate the SAR environment
+1) In the SAR directory, create and activate the SAR environment
 ```shell
 conda create -n SAR python=3.10.15
 conda activate SAR

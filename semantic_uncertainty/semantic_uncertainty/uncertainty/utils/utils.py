@@ -264,12 +264,11 @@ def get_gpt_metric(metric_name):
 
 
 def get_reference(example):
-    #if 'answers' not in example:
-    #    example = example['reference']
+    if 'answers' not in example:
+        example = example['reference']
     answers = example['answers']
-    #answer_starts = answers.get('answer_start', [])
-    #reference = {'answers': {'answer_start': answer_starts, 'text': answers['text']}, 'id': example['id']}
-    reference = {'answers': [{'answer_start': 0, 'text': answers['text'][0]}], 'id': str(example['id'])}
+    answer_starts = answers.get('answer_start', 0)
+    reference = {'answers': [{'answer_start': answer_starts, 'text': answers['text'][0]}], 'id': str(example['id'])}
     return reference
 
 
@@ -313,11 +312,10 @@ def get_metric(metric):
             # Compatibility with recomputation.
             if 'id' in example:
                 exid = example['id']
-            #elif 'id' in example['reference']:
-            #    exid = example['reference']['id']
+            elif 'id' in example['reference']:
+                exid = example['reference']['id']
             else:
                 raise ValueError
-
             prediction = {'prediction_text': response, 'no_answer_probability': 0.0, 'id': str(exid)}
             results = squad_metric.compute(
                 predictions=[prediction],

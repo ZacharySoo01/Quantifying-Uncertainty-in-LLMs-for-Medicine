@@ -47,6 +47,7 @@ sh scripts/pubmedqa/ue_pipeline-gemma-2b
 cd ..
 cd experiments
 ```
+5) Notebook of visuals can be found in the SAR/results directory
 ## Running Semantic Entropy experiments
 1) In the semantic_uncertainty directory, run the following commands to create and activate the semantic_uncertainty environment
 ```shell
@@ -65,6 +66,7 @@ python semantic_uncertainty/generate_answers.py --model_name=gemma-2b --dataset=
 When script is running, it will prompt for a wandb api key. Choose option 2 and enter in your api key, and the script will continue to run.
 
 3) Results will be tracked in wandb
+4) Notebook of visuals can be found in the semantic_entropy/semantic_entropy/results directory
 
 ## References
 ```shell

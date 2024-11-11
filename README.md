@@ -38,7 +38,7 @@ cd src
 ```shell
 sh scripts/pubmedqa/ue_pipeline_opt-2.7b.sh
 sh scripts/pubmedqa/ue_pipeline_gpt-neo-2.7b.sh
-sh scripts/pubmedqa/ue_pipeline_Llama-3.2-1b.sh
+sh scripts/pubmedqa/ue_pipeline_llama-3.2-1b.sh
 sh scripts/pubmedqa/ue_pipeline_phi2-2.7b.sh
 sh scripts/pubmedqa/ue_pipeline_gemma-2b.sh
 ```

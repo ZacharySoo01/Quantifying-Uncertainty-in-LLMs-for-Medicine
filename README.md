@@ -36,11 +36,11 @@ cd src
 ```
 3) Run scripts
 ```shell
-sh scripts/pubmedqa/ue_pipeline-opt-2.7b
-sh scripts/pubmedqa/ue_pipeline-gpt-neo-2.7b
-sh scripts/pubmedqa/ue_pipeline-Llama-3.2-1b
-sh scripts/pubmedqa/ue_pipeline-phi2-2.7b
-sh scripts/pubmedqa/ue_pipeline-gemma-2b
+sh scripts/pubmedqa/ue_pipeline_opt-2.7b.sh
+sh scripts/pubmedqa/ue_pipeline_gpt-neo-2.7b.sh
+sh scripts/pubmedqa/ue_pipeline_Llama-3.2-1b.sh
+sh scripts/pubmedqa/ue_pipeline_phi2-2.7b.sh
+sh scripts/pubmedqa/ue_pipeline_gemma-2b.sh
 ```
 4) Results will be tracked in the experiments folder
 ```shell

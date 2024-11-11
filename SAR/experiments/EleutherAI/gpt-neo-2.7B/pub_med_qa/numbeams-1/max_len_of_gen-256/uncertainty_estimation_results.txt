@@ -4,8 +4,6 @@ accuracy: 0.04 	 method: sentence-sar 	 type: rougeL_to_target 	 threshold: 0.50
 accuracy: 0.44 	 method: sentence-sar 	 type: sentsim 	 threshold: 0.5000 	 AUC: 0.5406
 accuracy: 0.04 	 method: token-sar 	 type: rougeL_to_target 	 threshold: 0.5000 	 AUC: 0.5000
 accuracy: 0.44 	 method: token-sar 	 type: sentsim 	 threshold: 0.5000 	 AUC: 0.5000
-accuracy: 0.04 	 method: semantic-entropy 	 type: rougeL_to_target 	 threshold: 0.5000 	 AUC: 0.5000
-accuracy: 0.44 	 method: semantic-entropy 	 type: sentsim 	 threshold: 0.5000 	 AUC: 0.5000
 accuracy: 0.04 	 method: len-normed-predictive-entropy 	 type: rougeL_to_target 	 threshold: 0.5000 	 AUC: 0.5000
 accuracy: 0.44 	 method: len-normed-predictive-entropy 	 type: sentsim 	 threshold: 0.5000 	 AUC: 0.5000
 accuracy: 0.04 	 method: predictive-entropy 	 type: rougeL_to_target 	 threshold: 0.5000 	 AUC: 0.5000

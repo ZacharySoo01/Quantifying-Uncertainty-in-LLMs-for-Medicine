@@ -176,30 +176,6 @@ def token_sar(cached_data):
     return scores
 
 
-def semantic_entropy(cached_data, num_generation=None):
-    llh_shift = torch.tensor(5.0)
-    likelihoods = cached_data['likelihoods']
-
-    new_likelihoods = []
-    if num_generation is not None:
-        for sample_ids, likeli in enumerate(likelihoods):
-            new_likelihoods.append({'token_wise_entropy': likeli['token_wise_entropy'][: num_generation],
-                                    'semantic_set_ids': likeli['semantic_set_ids'][: num_generation]})
-    likelihoods = new_likelihoods
-
-    scores = []
-    for sample_idx, likeli in enumerate(likelihoods):
-        token_wise_entropy = likeli['token_wise_entropy']
-        gen_entropy = torch.tensor([torch.mean(ent) for ent in token_wise_entropy]).float()
-        semantic_set_ids = torch.tensor(likeli['semantic_set_ids']).to(gen_entropy.device)
-        semantic_cluster_entropy = []
-        for semantic_id in torch.unique(semantic_set_ids):
-            semantic_cluster_entropy.append(torch.logsumexp(-1 * gen_entropy[semantic_set_ids == semantic_id], dim=0))
-        semantic_cluster_entropy = torch.tensor(semantic_cluster_entropy) - llh_shift
-        semantic_cluster_entropy = - torch.sum(semantic_cluster_entropy, dim=0) / torch.tensor(
-            semantic_cluster_entropy.shape[0])
-        scores.append(torch.mean(semantic_cluster_entropy))
-    return scores
 
 
 def len_normed_predictive_entropy(cached_data, num_generation):
@@ -252,8 +228,6 @@ def get_uncertainty(method, cached_data, args):
         return token_sar(cached_data)
     elif method == 'sentence-sar':
         return sentence_sar(cached_data, args.temperature)
-    elif method == 'semantic-entropy':
-        return semantic_entropy(cached_data, args.num_generation)
     elif method == 'len-normed-predictive-entropy':
         return len_normed_predictive_entropy(cached_data, args.num_generation)
     elif method == 'predictive-entropy':
@@ -342,7 +316,6 @@ def cmdline_args():
                        'sar',
                        'sentence-sar',
                        'token-sar',
-                       'semantic-entropy',
                        'len-normed-predictive-entropy',
                        'predictive-entropy',
                        'lexical-similarity'

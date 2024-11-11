@@ -245,7 +245,7 @@ def get_generations(model, dataloader, number_of_generations):
                     if 'llama' in args.model:
                         # clean most likely LLaMA generations
                         predictions = [sequence_dict['most_likely_generation'].lstrip().split('\n')[0]]
-                    elif 'opt' in args.model: 
+                    elif 'opt' in args.model or 'phi' in args.model: 
                         predictions = [sequence_dict['most_likely_generation'].split()[0]]
                     else:
                         predictions = [sequence_dict['most_likely_generation'].lstrip()]
